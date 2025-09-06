@@ -1,14 +1,24 @@
 {
   "name": "sobrr",
-  "main": "node_modules/expo/AppEntry.js",
+  "description": "A comprehensive React Native recovery support app to help individuals maintain sobriety and build healthy habits",
   "version": "1.0.0",
+  "main": "node_modules/expo/AppEntry.js",
   "scripts": {
     "start": "expo start",
-    "reset-project": "node ./scripts/reset-project.js",
+    "dev": "expo start --dev-client",
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "lint": "expo lint"
+    "build:android": "expo build:android",
+    "build:ios": "expo build:ios",
+    "lint": "expo lint",
+    "lint:fix": "expo lint --fix",
+    "type-check": "tsc --noEmit",
+    "clean": "expo r -c",
+    "reset-project": "node ./scripts/reset-project.js",
+    "install:clean": "rm -rf node_modules && npm install",
+    "prebuild": "expo prebuild --clean",
+    "test": "echo \"No tests specified\" && exit 0"
   },
   "dependencies": {
     "@expo/vector-icons": "^14.1.0",
@@ -43,9 +53,30 @@
   "devDependencies": {
     "@babel/core": "^7.25.2",
     "@types/react": "~19.0.10",
+    "@types/react-native": "~0.73.0",
     "eslint": "^9.25.0",
     "eslint-config-expo": "~9.2.0",
     "typescript": "~5.8.3"
+  },
+  "keywords": [
+    "react-native",
+    "expo",
+    "recovery",
+    "sobriety",
+    "addiction-support",
+    "mental-health",
+    "mobile-app",
+    "typescript"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/sobrr.git"
+  },
+  "author": "Sobrr Team",
+  "license": "MIT",
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=7.0.0"
   },
   "private": true
 }
