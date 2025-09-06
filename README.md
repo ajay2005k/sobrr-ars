@@ -178,15 +178,21 @@ npm run build:ios        # Build iOS app
    npm run install:clean
    ```
 
-3. **iOS Simulator not opening:**
+3. **Package-lock.json sync issues (especially during builds):**
+   ```bash
+   rm package-lock.json
+   npm install
+   ```
+
+4. **iOS Simulator not opening:**
    - Ensure Xcode is installed and updated
    - Try: `sudo xcode-select --install`
 
-4. **Android emulator issues:**
+5. **Android emulator issues:**
    - Verify ANDROID_HOME is set correctly
    - Ensure emulator is running before pressing 'a'
 
-5. **TypeScript errors:**
+6. **TypeScript errors:**
    ```bash
    npm run type-check
    ```
