@@ -125,6 +125,7 @@ const ContentScreen: React.FC = () => {
       <ScrollView 
         horizontal 
         showsHorizontalScrollIndicator={false}
+        style={styles.categoriesScrollView}
         contentContainerStyle={styles.categoriesContainer}
       >
         {categories.map((category) => (
@@ -179,27 +180,42 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     lineHeight: 22,
   },
-  categoriesContainer: {
+  categoriesScrollView: {
     paddingHorizontal: 20,
     paddingBottom: 20,
+    flexGrow: 0,
+  },
+  categoriesContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingVertical: 10,
   },
   categoryButton: {
-    paddingHorizontal: 16,
-    paddingVertical: 8,
-    borderRadius: 20,
+    paddingHorizontal: 20,
+    paddingVertical: 12,
+    borderRadius: 25,
     backgroundColor: '#fff',
     marginRight: 12,
     borderWidth: 1,
     borderColor: '#e0e0e0',
+    flexShrink: 0,
+    minWidth: 80,
+    height: 44,
+    alignItems: 'center',
+    justifyContent: 'center',
+    alignSelf: 'center',
   },
   selectedCategoryButton: {
     backgroundColor: '#007AFF',
     borderColor: '#007AFF',
   },
   categoryButtonText: {
-    fontSize: 14,
-    color: '#666',
-    fontWeight: '500',
+    fontSize: 15,
+    color: '#000',
+    fontWeight: 'bold',
+    textAlign: 'center',
+    includeFontPadding: false,
+    textAlignVertical: 'center',
   },
   selectedCategoryButtonText: {
     color: '#fff',
