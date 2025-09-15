@@ -243,7 +243,9 @@ sudo apt-get install -y build-essential
 - **Framework**: React Native with Expo
 - **Language**: TypeScript
 - **Navigation**: React Navigation v6
-- **UI Components**: React Native built-in components
+- **UI Styling**: NativeWind (TailwindCSS for React Native)
+- **Animations**: React Native Reanimated + Moti
+- **UI Components**: Custom components with NativeWind + existing React Native components
 - **State Management**: React Context + useState
 - **Development**: Expo CLI
 - **Platform**: iOS & Android
@@ -286,8 +288,22 @@ sobrr/
 │   └── SettingsNavigator.tsx
 ├── contexts/                   # React Context providers
 │   └── AppContext.tsx
+├── components/                 # Reusable UI components
+│   ├── ui/                     # NativeWind + Moti components
+│   │   ├── Button.tsx
+│   │   ├── Header.tsx
+│   │   ├── ProgressBar.tsx
+│   │   ├── TrackerCard.tsx
+│   │   └── JournalEntry.tsx
+│   ├── ThemedText.tsx          # Updated with NativeWind
+│   ├── ThemedView.tsx          # Updated with NativeWind
+│   └── index.ts                # Component exports
 ├── types/                      # TypeScript type definitions
 │   └── navigation.ts
+├── tailwind.config.js          # TailwindCSS configuration
+├── babel.config.js             # Babel configuration for NativeWind + Reanimated
+├── metro.config.js             # Metro bundler configuration
+├── global.css                  # Global TailwindCSS styles
 └── App.tsx                     # Main app component
 ```
 
@@ -315,6 +331,13 @@ sobrr/
 - Flexible routine building
 - Adaptable support styles
 - User-controlled preferences
+
+### **Modern UI Stack**
+- **NativeWind Integration** - TailwindCSS utility classes for consistent styling
+- **Smooth Animations** - React Native Reanimated + Moti for engaging interactions
+- **Reusable Components** - Pre-built UI components following recovery app theme
+- **Responsive Design** - Consistent appearance across iOS and Android
+- **Performance Optimized** - Efficient styling and animation system
 
 ## 🔧 **Current Implementation Status**
 
