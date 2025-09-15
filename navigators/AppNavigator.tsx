@@ -19,13 +19,19 @@ const TabBarIcon = ({ routeName, focused, size = 24 }: { routeName: string; focu
     Goals: '🎯',
     Content: '📚',
     Settings: '⚙️',
-    RecoveryMode: '🎯',
+    RecoveryMode: '🌙',
   };
   
   const icon = iconMap[routeName] || '📱';
   
   return (
-    <Text style={{ fontSize: size }}>
+    <Text style={{ 
+      fontSize: size, 
+      lineHeight: size + 4,
+      textAlign: 'center',
+      includeFontPadding: false,
+      textAlignVertical: 'center'
+    }}>
       {icon}
     </Text>
   );
@@ -47,13 +53,17 @@ const AppNavigator: React.FC = () => {
           backgroundColor: '#fff',
           borderTopWidth: 1,
           borderTopColor: '#e0e0e0',
-          paddingTop: 8,
-          paddingBottom: Platform.OS === 'ios' ? 20 : 8,
-          height: Platform.OS === 'ios' ? 88 : 68,
+          paddingTop: 12,
+          paddingBottom: Platform.OS === 'ios' ? 34 : 20,
+          height: Platform.OS === 'ios' ? 102 : 88,
         },
         tabBarLabelStyle: {
           fontSize: 12,
           fontWeight: '500',
+          marginTop: 6,
+          marginBottom: 2,
+        },
+        tabBarIconStyle: {
           marginTop: 4,
         },
         headerStyle: {
