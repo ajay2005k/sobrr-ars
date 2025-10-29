@@ -27,7 +27,6 @@ const GoalsNavigator: React.FC = () => {
           fontSize: 18,
         },
         headerBackTitle: 'Back',
-        headerBackTitleVisible: false,
       }}
     >
       <Stack.Screen 

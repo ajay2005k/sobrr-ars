@@ -9,7 +9,7 @@ const BreathingExerciseScreen: React.FC = () => {
   const opacityAnim = useRef(new Animated.Value(0.3)).current;
 
   useEffect(() => {
-    let interval: NodeJS.Timeout;
+    let interval: ReturnType<typeof setInterval> | undefined;
     
     if (isActive) {
       interval = setInterval(() => {

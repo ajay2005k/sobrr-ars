@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { View, Text, SafeAreaView, TouchableOpacity, ScrollView, Alert } from 'react-native';
+import React, { useEffect, useState } from 'react';
+import { Alert, SafeAreaView, ScrollView, Text, TouchableOpacity, View } from 'react-native';
 
 const MiniGamesScreen: React.FC = () => {
   const [tapCount, setTapCount] = useState(0);
@@ -10,7 +10,7 @@ const MiniGamesScreen: React.FC = () => {
   const [totalTaps, setTotalTaps] = useState(0);
 
   useEffect(() => {
-    let interval: NodeJS.Timeout;
+    let interval: ReturnType<typeof setInterval> | undefined;
     
     if (gameActive && timeLeft > 0) {
       interval = setInterval(() => {
